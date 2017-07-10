@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 10-Jul-2017 4:35:32 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="db_springproject" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.spring.hibernate.model.TbUser" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="tb_user">
+        <id name="userid" type="string">
+            <column length="30" name="USERID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="password" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="PASSWORD" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="NAME" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="EMAIL"/>
+        </property>
+        <property generated="never" lazy="false" name="point" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="POINT"/>
+        </property>
+        <property generated="never" lazy="false" name="rank" optimistic-lock="true" type="java.lang.Byte" unique="false">
+            <column name="RANK"/>
+        </property>
+        <property generated="never" lazy="false" name="regdate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="REGDATE" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="lastdate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="LASTDATE"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="GENDER"/>
+        </property>
+        <property generated="never" lazy="false" name="interest" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="INTEREST"/>
+        </property>
+    </class>
+</hibernate-mapping>
